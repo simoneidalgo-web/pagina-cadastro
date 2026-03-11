@@ -9,17 +9,32 @@
 
 <h1>Cadastro de Usuário</h1>
 
-<form>
+<form onsubmit="mostrarMensagem(event)">
 <label>Nome:</label>
-<input type="text"><br><br>
+<input type="text" required><br><br>
 
 <label>Email:</label>
-<input type="email"><br><br>
+<input type="email" required><br><br>
 
 <label>Senha:</label>
-<input type="password"><br><br>
+<input type="password" required><br><br>
 
-<button>Cadastrar</button>
+<button type="submit">Cadastrar</button>
+</form>
+
+<p id="mensagem" style="color:green; font-weight:bold;"></p>
+
+<script>
+function mostrarMensagem(event){
+event.preventDefault()
+
+document.getElementById("mensagem").innerText =
+"Cadastro realizado com sucesso!"
+}
+</script>
+
+</body>
+</html>
 </form>
 
 </body>
