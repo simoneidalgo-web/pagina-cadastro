@@ -9,21 +9,27 @@
 
 <h1>Cadastro de Usuário</h1>
 
+<form onsubmit="cadastro(event)">
+
 <label>Nome:</label>
-<input type="text" id="nome"><br><br>
+<input type="text"><br><br>
 
 <label>Email:</label>
-<input type="email" id="email"><br><br>
+<input type="email"><br><br>
 
 <label>Senha:</label>
-<input type="password" id="senha"><br><br>
+<input type="password"><br><br>
 
-<button onclick="cadastro()">Cadastrar</button>
+<button type="submit">Cadastrar</button>
+
+</form>
 
 <p id="mensagem"></p>
 
 <script>
-function cadastro(){
+function cadastro(event){
+event.preventDefault();
+
 document.getElementById("mensagem").innerText =
 "Cadastro realizado com sucesso!";
 }
